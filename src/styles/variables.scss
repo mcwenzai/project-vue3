@@ -1,0 +1,86 @@
+$primary-color: #1197ff;
+// 主标题
+$h1-text: (
+  size: 22px,
+  color: #222222,
+  font-weight: 700
+);
+$h1-text-white: (
+  size: 22px,
+  color: #ffffff,
+  font-weight: 700
+);
+// 副标题
+$h2-text: (
+  size: 20px,
+  color: #2e2e2e,
+  font-weight: 600
+);
+// 重点文本
+$important-text: (
+  size: 19px,
+  color: #333333,
+  font-weight: 600
+);
+$important-text-white: (
+  size: 19px,
+  color: #ffffff,
+  font-weight: 600
+);
+// 主文本
+$body-text: (
+  size: 16px,
+  color: #333333,
+  font-weight: 600
+);
+$body-text-white: (
+  size: 16px,
+  color: #ffffff,
+  font-weight: 600
+);
+// 描述文本
+$desc-text: (
+  size: 16px,
+  color: #444444,
+  font-weight: 500
+);
+$desc-text-white: (
+  size: 16px,
+  color: #ffffff,
+  font-weight: 500
+);
+// 提示文本
+$note-text: (
+  size: 14px,
+  color: #555555,
+  font-weight: 500
+);
+// 最小文本
+$min-text: (
+  size: 12px,
+  color: #666666,
+  font-weight: 400
+);
+
+// 主体卡片样式
+$card-bg: (
+  background-color: #ffffff,
+  margin: 0 40px,
+  padding: 16px 24px,
+  border-radius: 10px
+);
+
+@mixin text-styles($text-styles) {
+  font-size: map-get($text-styles, 'size');
+  color: map-get($text-styles, 'color');
+  font-weight: map-get($text-styles, 'font-weight');
+}
+
+.el-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: $primary-color;
+  color: $primary-color;
+  @include text-styles($body-text-white);
+}
